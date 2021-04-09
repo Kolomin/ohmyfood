@@ -200,17 +200,13 @@ SOMMAIRE ("copier/coller" et "ctrl+f" pour naviguer) :
 
   /* [950px ; 1249px] : Main - Restaurant : White box */
 
+  .restaurant > div:nth-child(3) {
+    padding: 12px;
+    padding-left: 15px;
+  }
+
   .restaurant > div:nth-child(3) p {
     font-size: 20px;
-    left: 14px;
-  }
-
-  .restaurant > div:nth-child(3) p:nth-child(1) {
-    top: 10px;
-  }
-
-  .restaurant > div:nth-child(3) p:nth-child(2) {
-    bottom: 10px;
   }
 
   /* [950px ; 1249px] : Main - Restaurant : Heart */
@@ -218,16 +214,9 @@ SOMMAIRE ("copier/coller" et "ctrl+f" pour naviguer) :
   .restaurant .heart-box {
     height: 28px;
     width: 28px;
-  }
-
-  .restaurant .heart-box .far {
+    top: 20px;
+    right: 20px;
     font-size: 28px;
-  }
-
-  /* [950px ; 1249px] : Main - Restaurant : Heart (Animation) */
-
-  .restaurant .heart-box:hover .fas {
-    font-size: 27px;
   }
 
 }

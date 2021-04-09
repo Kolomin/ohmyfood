@@ -375,23 +375,21 @@ SOMMAIRE ("copier/coller" et "ctrl+f" pour naviguer) :
 .restaurant > div:nth-child(3) {
   height: 25%;
   width: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 9.5px;
+  padding-left: 12px;
   position: relative;
   background-color: #FFF;
 }
 
 .restaurant > div:nth-child(3) p {
-  position: absolute;
-  left: 10px;
   font-size: 16px;
 }
 
 .restaurant > div:nth-child(3) p:nth-child(1) {
-  top: 8px;
   font-weight: bold;
-}
-
-.restaurant > div:nth-child(3) p:nth-child(2) {
-  bottom: 8px;
 }
 
 
@@ -402,8 +400,8 @@ SOMMAIRE ("copier/coller" et "ctrl+f" pour naviguer) :
 
 .restaurant .heart-box {
   position: absolute;
-  top: 18px;
-  right: 18px;
+  top: 15px;
+  right: 15px;
   z-index: 2;
 }
 
