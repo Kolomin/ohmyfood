@@ -1,0 +1,385 @@
+/*
+SOMMAIRE ("copier/coller" et "ctrl+f" pour naviguer) :
+
+
+* Reset
+
+
+* None & Flexbox
+
+
+* Title font
+
+
+* Image box
+
+
+* Loading
+
+
+* Header
+
+
+* Footer
+
+* Footer - Address
+
+
+* Button
+
+
+* Heart
+
+
+* ...
+*/
+
+
+
+
+
+
+/* Reset */
+
+* {
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', arial, sans-serif;
+  text-decoration: none;
+  color: #000;
+}
+
+
+
+
+
+
+/* None & Flexbox */
+
+.none {
+  display: none;
+}
+
+.flexbox {
+  display: flex;
+}
+
+
+
+
+
+
+/* Title font */
+
+.title-font {
+  font-family: 'Shrikhand', cursive;
+}
+
+
+
+
+
+
+/* Image box */
+
+.r1 {
+  background-image: url("../images/r1.jpg");
+}
+
+.r2 {
+  background-image: url("../images/r2.jpg");
+}
+
+.r3 {
+  background-image: url("../images/r3.jpg");
+}
+
+.r4 {
+  background-image: url("../images/r4.jpg");
+}
+
+
+
+
+
+
+/* Loading */
+
+#loading {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 888;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  background-color: #000;
+}
+
+#loading div {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  border: 10px dotted #9356DC;
+  box-sizing: border-box;
+}
+
+
+
+/* Loading (Animation) */
+
+#loading {
+  animation: loading-disparition 1s linear 0s 1;
+}
+
+#loading div {
+  animation: loading-rotation 1s linear 0s 1;
+}
+
+@keyframes loading-rotation {
+
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(180deg);
+  }
+
+}
+
+@keyframes loading-disparition {
+
+  0% {
+    visibility: visible;
+  }
+
+  90%;
+  {
+    opacity: 1;
+  }
+
+  95% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+}
+
+
+
+
+
+
+/* Header */
+
+header {
+  height: 60px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+}
+
+header img {
+  height: 30px;
+}
+
+
+
+
+
+
+/* Footer */
+
+footer {
+  padding: 30px 0;
+  background-color: #353535;
+}
+
+footer p {
+  margin-left: 7%;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+footer p,
+footer a,
+footer .fas,
+footer span {
+  font-style: normal;
+  color: #FFF;
+}
+
+
+
+/* Footer - Address */
+
+footer address {
+  height: 100px;
+  margin-left: 7%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+footer a {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+footer span {
+  margin-left: 22px;
+  font-weight: bold;
+}
+
+footer .fas {
+  position: absolute;
+  left: 0;
+}
+
+footer .fa-utensils {
+  font-size: 12px;
+}
+
+footer .fa-hands-helping {
+  font-size: 9px;
+}
+
+
+
+
+
+
+/* Button */
+
+.button {
+  height: 45px;
+  padding: 0 20px;
+  border-radius: 25px;
+  position: relative;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  box-shadow: 0px 4px 8px 2px rgba(0,0,0,0.2);
+}
+
+.button div {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  opacity: 0;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.button span {
+  z-index: 1;
+  font-size: 14px;
+  font-weight: bold;
+  color: #FFF;
+}
+
+
+
+/* Button (Animation) */
+
+.button {
+  transition: box-shadow 0.1s linear 0s;
+}
+
+.button:hover {
+  box-shadow: 0px 4px 10px 4px rgba(0,0,0,0.2);
+}
+
+.button div {
+  transition: opacity 0.1s linear 0s;
+}
+
+.button:hover div {
+  opacity: 1;
+}
+
+
+
+
+
+
+/* Heart */
+
+.heart-box {
+  height: 22px;
+  width: 22px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart-box .far {
+  position: absolute;
+  font-size: 22px;
+}
+
+.heart-box .fas {
+  position: absolute;
+  font-size: 0px;
+  background: linear-gradient(40deg, #FF79DA, #9356DC);
+  background-clip: text;
+  color: transparent;
+}
+
+
+
+/* Heart (Animation) */
+
+.heart-box .far {
+  transition: color 0.3s linear 0s;
+}
+
+.heart-box:hover .far {
+  color: transparent;
+}
+
+.heart-box .fas {
+  transition: font-size 0.3s linear 0s;
+}
+
+.heart-box:hover .fas {
+  font-size: 21px;
+}
+
+
+
+
+
+
+/* ... */
+
+/* ... */
+
+
+
+
+
+
+/* Test en tout genre */
+
+ .box-random {
+   padding: 40px 0;
+   justify-content: center;
+   align-items: center;
+   background-color: lightblue;
+ }
